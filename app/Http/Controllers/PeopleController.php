@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\People;
 
 class PeopleController extends Controller
 {
@@ -14,6 +15,9 @@ class PeopleController extends Controller
     public function index()
     {
         //
+        $people = People::all();
+        dd($people);
+        return view('people.index', ['people' => $people]);
     }
 
     /**

@@ -15,6 +15,13 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('workstand')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('email')->nullable()->unique();
+            $table->unsignedBigInteger('companies_id');
+            $table->foreign('companies_id')->references('id')->on('companies');
             $table->timestamps();
         });
     }

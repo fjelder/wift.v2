@@ -17,21 +17,21 @@ class CompaniesSeeder extends Seeder
         //
 			DB::table('companies')->insert([
             'name' => 'Zakład Robót Komunikacyjnych – DOM w Poznaniu Sp. z o.o.',
-						'shortName' => 'ZRK',
+						'short_name' => 'ZRK',
             'street' => 'ul. Kolejowa 4',
             'city' => 'Poznań',
-            'postCode' => '60-715',
-            'phoneNumber' => 616333659,
+            'post_code' => '60-715',
+            'phone_number' => 616333659,
 						'created_at' => now(),
 						'updated_at' => now()
       ]);
 			DB::table('companies')->insert([
             'name' => 'PKP Energetyka S.A. - Centrala',
-						'shortName' => 'PKP Energetyka - centrala',
+						'short_name' => 'PKP Energetyka - centrala',
             'street' => 'ul. Hoża 63/67',
             'city' => 'Warszawa',
-            'postCode' => '00-681',
-            'phoneNumber' => 224741900,
+            'post_code' => '00-681',
+            'phone_number' => 224741900,
 						'created_at' => now(),
 						'updated_at' => now()
       ]);

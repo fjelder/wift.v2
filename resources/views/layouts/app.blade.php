@@ -13,7 +13,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 			
-<!--         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> -->
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
         @livewireStyles
 
@@ -41,5 +41,7 @@
         @stack('modals')
 
         @livewireScripts
+        <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
+
 </html>

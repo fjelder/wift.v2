@@ -23,9 +23,7 @@
                     </x-jet-nav-link>
 										<x-jet-nav-link href="{{ route('people.index') }}" :active="request()->routeIs('people.index')">
                         {{ __('People') }}
-                    </x-jet-nav-link>
-									<x-jet-input :class="test"></x-jet-input>
-										
+                    </x-jet-nav-link>										
                 </div>
             </div>
 					
