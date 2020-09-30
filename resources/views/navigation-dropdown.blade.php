@@ -15,8 +15,20 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
+										<x-jet-nav-link href="{{ route('contacts.index') }}" :active="request()->routeIs('contacts.index')">
+                        {{ __('Contacts') }}
+                    </x-jet-nav-link>
+										<x-jet-nav-link href="{{ route('companies.index') }}" :active="request()->routeIs('companies.index')">
+                        {{ __('Companies') }}
+                    </x-jet-nav-link>
+										<x-jet-nav-link href="{{ route('people.index') }}" :active="request()->routeIs('people.index')">
+                        {{ __('People') }}
+                    </x-jet-nav-link>
+									<x-jet-input :class="test"></x-jet-input>
+										
                 </div>
             </div>
+					
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">

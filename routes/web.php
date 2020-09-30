@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CompaniesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homes');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::resources([
+    'contacts' => ContactController::class,
+		'companies' => CompaniesController::class,
+		'people' => PeopleController::class
+]);
