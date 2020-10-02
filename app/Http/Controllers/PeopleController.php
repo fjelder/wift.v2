@@ -16,7 +16,8 @@ class PeopleController extends Controller
     {
         //
         $people = People::all();
-        dd($people);
+        // $people = People::first()->company->name;
+        // dd($people);
         return view('people.index', ['people' => $people]);
     }
 

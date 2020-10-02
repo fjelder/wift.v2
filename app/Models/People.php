@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class People extends Model
 {
     use HasFactory;
+
+    public function company()
+    {
+    	return $this->belongsTo('App\Models\Companies', 'companies_id');
+    }
 }

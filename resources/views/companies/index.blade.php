@@ -28,7 +28,7 @@
 								<tr>
 									<td>{{ $loop->iteration }}</td>
 									<td><a href="{{ route('companies.show', $company->id)}}">{{ $company->name }}</a></td>
-									<td>{{ $company->shortName }}</td>
+									<td>{{ $company->short_name }}</td>
 								</tr>
 								@endforeach
 							</tbody>

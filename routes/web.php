@@ -26,6 +26,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resources([
     'contacts' => ContactController::class,
-		'companies' => CompaniesController::class,
-		'people' => PeopleController::class
+	'companies' => CompaniesController::class,
+	'people' => PeopleController::class
 ]);
