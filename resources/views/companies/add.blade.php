@@ -7,58 +7,65 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Basic Component</h5>
+                        <h5>Dane kontaktowe</h5>
+                        <hr>
                     </div>
                     <div class="card-body">
            
                         <div class="row">
-                            <div class="col-md-6">
-                                <h5 class="mt-1">Horizontal Form</h5>
-                                <hr>
-                                <form>
+                            <div class="col-lg-6">
+                                <form action="{{ route('companies.store') }}" method="post">
+                                    @csrf
                                     <div class="form-group row">
-                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nazwa</label>
                                         <div class="col-sm-9">
-                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nazwa skrócona</label>
                                         <div class="col-sm-9">
-                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
-                                    <fieldset class="form-group">
-                                        <div class="row">
-                                            <label for="inputPassword3" class="col-sm-3 col-form-label">Radios</label>
-                                            <div class="col-sm-9">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                                    <label class="form-check-label" for="gridRadios1">First radio</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                                    <label class="form-check-label" for="gridRadios2">Second radio</label>
-                                                </div>
-                                                <div class="form-check disabled">
-                                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                                                    <label class="form-check-label" for="gridRadios3">Third disabled radio</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
                                     <div class="form-group row">
-                                        <div class="col-sm-3">Checkbox</div>
+                                        <label for="" class="col-sm-3 col-form-label">Adres</label>
                                         <div class="col-sm-9">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">Example checkbox</label>
-                                            </div>
-                                        </div>
+                                            <input type="text" class="form-control" placeholder="ulica">
+                                        </div>                                        
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" placeholder="miasto">
+                                        </div>
+                                        <div class="col-sm-3 mt-2-sm">
+                                            <input type="text" class="form-control" placeholder="kod pocztowy">
+                                        </div>                                        
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label">Telefon (komórkowy)</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" placeholder="+00 000 000 000">
+                                        </div>                                        
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label">Telefon (stacjonarny)</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" placeholder="(00) 000 00 00">
+                                        </div>                                        
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label">Informacje dodatkowe</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" name="description"></textarea>
+                                        </div>                                        
+                                    </div>
+                                    
+                        
                                     <div class="form-group row">
                                         <div class="col-sm-10">
-                                            <button type="submit" class="btn  btn-primary">Sign in</button>
+                                            <button type="submit" class="btn  btn-primary">{{ __('Save') }}</button>
                                         </div>
                                     </div>
                                 </form>
