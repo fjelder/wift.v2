@@ -5,8 +5,8 @@
                     <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
                     <a href="#!" class="b-brand">
                         <!-- ========   change your logo hear   ============ -->
-                        <img src="assets/images/logo.png" alt="" class="logo">
-                        <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="" class="logo">
+                        <img src="{{ asset('assets/images/logo-icon.png') }}" alt="" class="logo-thumb">
                     </a>
                     <a href="#!" class="mob-toggler">
                         <i class="feather icon-more-vertical"></i>
@@ -33,10 +33,10 @@
                                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i><span class="badge bg-danger"><span class="sr-only"></span></span></a>
                                 <div class="dropdown-menu dropdown-menu-right notification">
                                     <div class="noti-head">
-                                        <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                        <h6 class="d-inline-block m-b-0">{{ __('Notifications') }}</h6>
                                         <div class="float-right">
-                                            <a href="#!" class="m-r-10">mark as read</a>
-                                            <a href="#!">clear all</a>
+                                            <a href="#!" class="m-r-10">{{ __('mark as read') }}</a>
+                                            <a href="#!">{{ __('clear all') }}</a>
                                         </div>
                                     </div>
                                     <ul class="noti-body">
@@ -45,7 +45,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="{{ asset('assets/images/user/avatar-1.jpg') }}" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>5 min</span></p>
                                                     <p>New ticket Added</p>
@@ -57,7 +57,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
                                                     <p>Prchace New Theme and make payment</p>
@@ -66,7 +66,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="{{ asset('assets/images/user/avatar-1.jpg') }}" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>12 min</span></p>
                                                     <p>currently login</p>
@@ -75,7 +75,7 @@
                                         </li>
                                         <li class="notification">
                                             <div class="media">
-                                                <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                                <img class="img-radius" src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Generic placeholder image">
                                                 <div class="media-body">
                                                     <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
                                                     <p>Prchace New Theme and make payment</p>

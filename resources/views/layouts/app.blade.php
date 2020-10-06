@@ -41,11 +41,12 @@
                         <div class="page-header-title">
                             <h5 class="m-b-10">{{ $header }}</h5>
                         </div>
-                        <ul class="breadcrumb">
+                        <!-- <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
                             <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
-                        </ul>
+                        </ul> -->
+                        <x-breadcrumbs :datta="request()->url()"/>
                     </div>
                 </div>
             </div>
@@ -63,8 +64,8 @@
 <!-- [ Main Content ] end -->
     <!-- Warning Section start -->
     <!-- Older IE warning message -->
-    <!--[if lt IE 11]>
-        <div class="ie-warning">
+    [if lt IE 11]>
+        <!-- <div class="ie-warning">
             <h1>Warning!!</h1>
             <p>You are using an outdated version of Internet Explorer, please upgrade
                <br/>to any of the following web browsers to access this website.
@@ -104,8 +105,8 @@
                 </ul>
             </div>
             <p>Sorry for the inconvenience!</p>
-        </div>
-    <![endif]-->
+        </div> -->
+    <![endif]
     <!-- Warning Section Ends -->
 
     <!-- Required Js -->
