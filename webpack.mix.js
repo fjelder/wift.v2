@@ -11,8 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
+// mix.extract(['jquery', 'tabler']);
+// mix.extract(['bootstrap'], 'js/bootstrap.js');
+// mix.copy('node_modules/autosize/dist/autosize.js', 'public/js/autosize.js');
+
+
+
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ]);
+.postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+]);

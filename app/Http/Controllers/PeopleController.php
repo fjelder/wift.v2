@@ -26,9 +26,16 @@ class PeopleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $companies = \App\Models\Companies::all();
+        // $company = \App\Models\Companies::where('id', $request->company)->first()->id;
+        $company = $request->company;
+
+        return view('companies.create', [
+            'companies' => $companies,
+            'current_company' => $company
+        ]);
     }
 
     /**

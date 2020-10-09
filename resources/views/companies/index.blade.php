@@ -1,43 +1,32 @@
 <x-app-layout>
 	<x-slot name="header">
-			{{ __('Companies') }}
+		{{ __('Companies') }}
 	</x-slot>
 
-	<div class="row">
-
-			<div class="col-xl-12">
-				<div class="card">
-					<div class="card-header">
-						<h5>Lista firma współpracujących</h5>
-						<span class="d-block m-t-5">wybierz <code>firmę</code>, żeby zobaczyć szczegóły</span>
-					</div>
-					<div class="card-block table-border-style">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Nazwa pełna</th>
-									<th>Nazwa skrócona</th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach($companies as $company)
-								<tr>
-									<td>{{ $loop->iteration }}</td>
-									<td><a href="{{ route('companies.show', $company->id)}}">{{ $company->name }}</a></td>
-									<td>{{ $company->short_name }}</td>
-								</tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>
-				</div>
+	<div class="box">
+		<div class="card">
+			<div class="table-responsive">
+				<table class="table table-vcenter card-table">
+					<thead>
+						<tr>
+							<th  class="w-1">#</th>
+							<th>Nazwa</th>
+							<th>Nazwa skrócona</th>
+							<th class="w-1"></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($companies as $company)
+						<tr>
+							<td>{{ $loop->iteration }}</td>
+							<td><a href="{{ route('companies.show', $company->id)}}">{{ $company->name }}</a></td>
+							<td class="text-muted">{{ $company->short_name }}</td>
+							<td class="text-muted"><a href="{{ route('companies.edit', $company->id)}}">edit</a></td>
+						</tr>
+						@endforeach
+					</tbody>
+				</table>
 			</div>
 		</div>
-
-
-
-
-
 	</div>
 </x-app-layout>

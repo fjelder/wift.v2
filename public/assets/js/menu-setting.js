@@ -3,7 +3,7 @@ $(document).ready(function() {
     // =========================================================
     // =========    Menu Customizer [ HTML ] code   ============
     // =========================================================
-    $('body').append('' +
+    $('body').append(' ' +
         '<div id="styleSelector" class="menu-styler">' +
             '<div class="style-toggler">' +
                 '<a href="#!"></a>' +

@@ -827,9 +827,12 @@ $('.pcoded-navbar .close').on('click', function() {
 // active menu item list start
 $(".pcoded-navbar .pcoded-inner-navbar a").each(function() {
     var pageUrl = window.location.href.split(/[?#]/)[0];
+    console.log(pageUrl);
     if (!$('body').hasClass('layout-14')) {
+        // console.log(this.href);
         if (this.href == pageUrl && $(this).attr('href') != "") {
             $(this).parent('li').addClass("active");
+
             if (!$('.pcoded-navbar').hasClass('theme-horizontal')) {
                 $(this).parent('li').parent().parent('.pcoded-hasmenu').addClass("active").addClass("pcoded-trigger");
                 $(this).parent('li').parent().parent('.pcoded-hasmenu').parent().parent('.pcoded-hasmenu').addClass("active").addClass("pcoded-trigger");

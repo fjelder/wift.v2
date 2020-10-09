@@ -29,3 +29,7 @@ Route::resources([
 	'companies' => CompaniesController::class,
 	'people' => PeopleController::class
 ]);
+
+Route::get('/tabler', function () {
+    return view('tabler');
+});

@@ -1,16 +1,11 @@
 <x-app-layout>
 	<x-slot name="header">
-		{{ __('Dane osobowe') }}
+		{{ __('Osoby') }}
 	</x-slot>
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="card">
-				<div class="card-header">
-					<h5>Lista osób w systemie</h5>
-				</div>
-				<div class="card-body">
-					
-				<table class="table table-inverse table-hover table-responsive-sm">
+	<div class="box">
+		<div class="card">
+			<div class="table-responsive">
+				<table class="table table-vcenter card-table">
 					<thead>
 						<tr>
 							<th style="max-width: 10px;">#</th>
@@ -26,7 +21,7 @@
 							<td>{{ $person->first_name }} {{ $person->last_name }}</td>
 							<td>{{ $person->company->name }}</td>
 							<td>
-								<a href="{{ route('people.show', $person->id) }}"><i class="feather icon-clipboard"></i></a>
+								<a href="{{ route('people.show', $person->id) }}">edit</a>
 							</td>
 						</tr>
 						@endforeach
@@ -34,7 +29,5 @@
 				</table>
 			</div>
 		</div>
-</div>	
-</div>
-
+	</div>	
 </x-app-layout>

@@ -7,114 +7,50 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Favicon icon -->
-        <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- vendor css -->
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <!-- Styles -->
+        <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
+		<link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet"/>
+        @livewireStyles
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
     </head>
-    <body class="">
-    <!-- [ Pre-loader ] start -->
-    <div class="loader-bg">
-        <div class="loader-track">
-            <div class="loader-fill"></div>
-        </div>
-    </div>
-    <!-- [ Pre-loader ] End -->
-    <!-- [ navigation menu ] start -->
-    @include('layouts.sidebar')
-    <!-- [ navigation menu ] end -->
+      <body class="antialiased">
+    <div class="page">
+      
+      @livewire('header')
+      @livewire('navigation')
+      <div class="content">
+        <div class="container-xl">
+          <!-- Page title -->
+          <div class="page-header">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <h2 class="page-title">
+                  {{ $header }}
+                </h2>
 
-    <!-- [ Header ] start -->
-    @include('layouts.header')
-    <!-- [ Header ] end -->
-    
-
-<!-- [ Main Content ] start -->
-<section class="pcoded-main-container">
-    <div class="pcoded-content">
-        <!-- [ breadcrumb ] start -->
-        <div class="page-header">
-            <div class="page-block">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <div class="page-header-title">
-                            <h5 class="m-b-10">{{ $header }}</h5>
-                        </div>
-                        <!-- <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
-                            <li class="breadcrumb-item"><a href="#!">Form Elements</a></li>
-                        </ul> -->
-                        <x-breadcrumbs :datta="request()->url()"/>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <!-- Content here -->
+          <main>
+            {{ $slot }}
+        </main>
         </div>
-        <!-- [ breadcrumb ] end -->
-
-        <!-- [ Main Content ] start -->
-        
-            <main>{{ $slot }}</main>
-       
-        <!-- [ Main Content ] end -->
-
+        @livewire('footer')
+      </div>
     </div>
-</section>
-<!-- [ Main Content ] end -->
-    <!-- Warning Section start -->
-    <!-- Older IE warning message -->
-    [if lt IE 11]>
-        <!-- <div class="ie-warning">
-            <h1>Warning!!</h1>
-            <p>You are using an outdated version of Internet Explorer, please upgrade
-               <br/>to any of the following web browsers to access this website.
-            </p>
-            <div class="iew-container">
-                <ul class="iew-download">
-                    <li>
-                        <a href="http://www.google.com/chrome/">
-                            <img src="assets/images/browser/chrome.png" alt="Chrome">
-                            <div>Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.mozilla.org/en-US/firefox/new/">
-                            <img src="assets/images/browser/firefox.png" alt="Firefox">
-                            <div>Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com">
-                            <img src="assets/images/browser/opera.png" alt="Opera">
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.apple.com/safari/">
-                            <img src="assets/images/browser/safari.png" alt="Safari">
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                            <img src="assets/images/browser/ie.png" alt="">
-                            <div>IE (11 & above)</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <p>Sorry for the inconvenience!</p>
-        </div> -->
-    <![endif]
-    <!-- Warning Section Ends -->
-
-    <!-- Required Js -->
-    <script src="{{ asset('assets/js/vendor-all.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/pcoded.min.js') }}"></script>
-
-
-</body>
-
+    @livewireScripts
+    <!-- Libs JS -->
+    <script src="{{ asset('dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js"></script>
+    <script>
+      document.body.style.display = "block"
+    </script>
+  </body>
 </html>
