@@ -18,10 +18,12 @@ class CreatePeopleTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('workstand')->nullable();
-            $table->string('phone_number')->nullable();
+            $table->string('phone_number_1', 15)->nullable(); // +00 000 000 000
+            $table->string('phone_number_2', 15)->nullable(); // (00) 000 00 00
             $table->string('email')->nullable()->unique();
             $table->unsignedBigInteger('companies_id');
             $table->foreign('companies_id')->references('id')->on('companies');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

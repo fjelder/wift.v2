@@ -52,11 +52,11 @@ class CompaniesController extends Controller
     {
         //
         $company = Companies::where('id', $id)->first();
-        $company->people;
-        $parts = array(0 => 2, 2 => 3, 5 => 3, 8 => 3);
-        $company->phone_number_1 = $this->formatPhoneNumber($company->phone_number_1, $parts, '+');
-        $parts = array(0 => 2, 2 => 3, 5 => 2, 7 => 2);
-        $company->phone_number_2 = $this->formatPhoneNumber($company->phone_number_2, $parts);
+        // $company->people;
+        // $parts = array(0 => 2, 2 => 3, 5 => 3, 8 => 3);
+        // $company->phone_number_1 = $this->formatPhoneNumber($company->phone_number_1, $parts, '+');
+        // $parts = array(0 => 2, 2 => 3, 5 => 2, 7 => 2);
+        // $company->phone_number_2 = $this->formatPhoneNumber($company->phone_number_2, $parts);
         return view('companies.show', ['company' => $company]);
     }
     public function formatPhoneNumber($phoneNumber, $parts, $prefix = '')

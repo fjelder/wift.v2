@@ -20,8 +20,8 @@ class CreateCompaniesTable extends Migration
 			$table->string('street');
 			$table->string('city');
 			$table->string('post_code');
-			$table->unsignedBigInteger('phone_number_1'); // 00 000 000 000
-            $table->unsignedBigInteger('phone_number_2'); // 00 000 00 00
+			$table->string('phone_number_1', 15)->nullable();; // +00 000 000 000
+            $table->string('phone_number_2', 15)->nullable();; // (00) 000 00 00
             $table->timestamps();
         });
     }

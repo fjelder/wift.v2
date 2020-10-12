@@ -29,10 +29,9 @@
           <div class="page-header">
             <div class="row align-items-center">
               <div class="col-auto">
-                <h2 class="page-title">
+                <!-- <h2 class="page-title"> -->
                   {{ $header }}
-                </h2>
-
+                <!-- </h2> -->
               </div>
             </div>
           </div>

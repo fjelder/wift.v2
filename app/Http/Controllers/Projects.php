@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\People;
 
-class PeopleController extends Controller
+class Projects extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,6 @@ class PeopleController extends Controller
     public function index()
     {
         //
-        $people = People::all();
-        // $people = People::first()->company->name;
-        // dd($people);
-        return view('people.index', ['people' => $people]);
     }
 
     /**
@@ -26,16 +21,9 @@ class PeopleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        $companies = \App\Models\Companies::all();
-        // $company = \App\Models\Companies::where('id', $request->company)->first()->id;
-        $company = $request->company;
-
-        return view('companies.create', [
-            'companies' => $companies,
-            'current_company' => $company
-        ]);
+        //
     }
 
     /**
@@ -58,8 +46,6 @@ class PeopleController extends Controller
     public function show($id)
     {
         //
-        $person = People::where('id', $id)->first();
-        return view('people.show', ['person' => $person]);
     }
 
     /**

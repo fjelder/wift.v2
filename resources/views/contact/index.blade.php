@@ -1,15 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Contact') }}
-        </h2>
+        <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('contacts.index') }}">Kontakty</a></li>
+        </ol>
     </x-slot>
 
-    <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-           coś tam coś tam
-					
-					@livewire('show-posts')
+    <div class="box">
+        <div class="card">
+          <div class="card-body">
+            <a href="{{ route('companies.index') }}" class="nav-link">Podmioty</a>
+            <a href="{{ route('people.index') }}" class="nav-link">Osoby</a>
         </div>
     </div>
+</div>
 </x-app-layout>

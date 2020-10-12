@@ -21,8 +21,8 @@ class CompaniesSeeder extends Seeder
             'street' => 'ul. Kolejowa 4',
             'city' => 'Poznań',
             'post_code' => '60-715',
-            'phone_number_1' => 48605258659,
-            'phone_number_2' => 616333659,
+            'phone_number_1' => '+48 605 258 659',
+            'phone_number_2' => '(61) 633 36 59',
 						'created_at' => now(),
 						'updated_at' => now()
       ]);
@@ -32,8 +32,8 @@ class CompaniesSeeder extends Seeder
             'street' => 'ul. Hoża 63/67',
             'city' => 'Warszawa',
             'post_code' => '00-681',
-            'phone_number_1' => 48515248894,
-            'phone_number_2' => 224741900,
+            'phone_number_1' => '+48 515 248 894',
+            'phone_number_2' => '(22) 474 19 00',
 						'created_at' => now(),
 						'updated_at' => now()
       ]);
