@@ -1,7 +1,7 @@
-@props(['submit'])
+@props(['submit', 'type'])
 
 
-<div {{ $attributes->merge(['class' => 'alert alert-']) }}>
+<div class="{{$type}}">
   <div class="card-header">
     <x-jet-section-title>
             <x-slot name="title">{{ $title }}</x-slot>

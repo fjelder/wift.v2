@@ -48,8 +48,24 @@
     <script src="{{ asset('dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Tabler Core -->
     <script src="./dist/js/tabler.min.js"></script>
+
+    <script src="https://unpkg.com/imask"></script>
     <script>
       document.body.style.display = "block"
     </script>
+    <script>
+  (function () {
+    /**
+     * Input mask
+     */
+    var maskElementList = [].slice.call(document.querySelectorAll('[data-mask]'))
+    maskElementList.map(function (maskEl) {
+      return new IMask(maskEl, {
+        mask: maskEl.dataset.mask,
+        lazy: maskEl.dataset['mask-visible'] === 'true'
+      })
+    });
+  })();
+</script>
   </body>
 </html>

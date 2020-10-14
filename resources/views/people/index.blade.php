@@ -42,5 +42,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-sm-3">
+		@livewire('contact-form')
+	</div>
+	
+
+
 	<!-- @livewire('search-people')	 -->
 </x-app-layout>
